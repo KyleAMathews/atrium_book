@@ -265,4 +265,28 @@ function atrium_book_form_alter(&$form, $form_state) {
       }
     }
   }
+
+  // Remove the book form from other nodes, even if the user has admin permissions.
+  else if ($form['#id'] == 'node-form' && !book_type_is_allowed($form['#node']->type)) {
+    _atrium_book_make_hidden($form['book']);
+  }
 }
+
+/**
+ * Set all elements in a given form to 'value'. Using value preserves the tree and prevents
+ * The element from being rendered.
+ */
+function _atrium_book_make_hidden(&$form) {
+  if (isset($form['#type'])) {
+    $form['#type'] = 'value';
+    $form['#required'] = FALSE;
+  }
+  if (is_array($form)) {
+    foreach ($form as $key => $value) {
+      if (is_array($value) && strpos($key, '#') !== 0) {
+        _eduglu_core_make_hidden($form[$key]);
+      }
+    }
+  }
+}
+
