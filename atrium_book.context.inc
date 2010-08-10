@@ -47,6 +47,10 @@ function atrium_book_context_default_contexts() {
   );
   $context->condition_mode = 0;
 
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Book');
+
   $export['spaces-feature-book'] = $context;
   return $export;
 }

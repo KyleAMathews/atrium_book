@@ -21,9 +21,8 @@ function atrium_book_menu_default_menu_links() {
     'weight' => '0',
   );
   // Translatables
-  array(
-    t('Notebook'),
-  );
+  // Included for use with string extractors like potx.
+  t('Notebook');
 
 
   return $menu_links;

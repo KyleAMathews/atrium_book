@@ -12,7 +12,6 @@ function atrium_book_user_default_permissions() {
     'roles' => array(
       '0' => 'admin',
       '1' => 'authenticated user',
-      '2' => 'manager',
     ),
   );
 
@@ -30,7 +29,6 @@ function atrium_book_user_default_permissions() {
     'roles' => array(
       '0' => 'admin',
       '1' => 'authenticated user',
-      '2' => 'manager',
     ),
   );
 
@@ -40,7 +38,6 @@ function atrium_book_user_default_permissions() {
     'roles' => array(
       '0' => 'admin',
       '1' => 'authenticated user',
-      '2' => 'manager',
     ),
   );
 
@@ -49,7 +46,6 @@ function atrium_book_user_default_permissions() {
     'name' => 'delete any book content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'manager',
     ),
   );
 
@@ -59,7 +55,6 @@ function atrium_book_user_default_permissions() {
     'roles' => array(
       '0' => 'admin',
       '1' => 'authenticated user',
-      '2' => 'manager',
     ),
   );
 
@@ -69,7 +64,6 @@ function atrium_book_user_default_permissions() {
     'roles' => array(
       '0' => 'admin',
       '1' => 'authenticated user',
-      '2' => 'manager',
     ),
   );
 
